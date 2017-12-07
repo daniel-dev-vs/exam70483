@@ -42,16 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MultiThreadExample.cs" />
-    <Compile Include="ParallelLINQ.cs" />
+    <Compile Include="Objective1.1\MultiThreadExample.cs" />
+    <Compile Include="Objective1.1\ParallelLINQ.cs" />
+    <Compile Include="Objective1.2\SynchronizingResources.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsingBlockingCollection.cs" />
-    <Compile Include="UsingParallel.cs" />
-    <Compile Include="UsingTask.cs" />
+    <Compile Include="Objective1.1\UsingBlockingCollection.cs" />
+    <Compile Include="Objective1.1\UsingConcurrent.cs" />
+    <Compile Include="Objective1.1\UsingParallel.cs" />
+    <Compile Include="Objective1.1\UsingTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

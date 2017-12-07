@@ -21,8 +21,8 @@ namespace Programming
 
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("ThreadProc:{0}", i);
-                Thread.Sleep(0);
+                Console.WriteLine("ThreadProc METHOD 1 :{0}", i);
+                Thread.Sleep(1000);
             }
         }
 
@@ -31,8 +31,8 @@ namespace Programming
 
             for (int i = 0; i < (int)o; i++)
             {
-                Console.WriteLine("ThreadProc:{0}", i);
-                Thread.Sleep(0);
+                Console.WriteLine("ThreadProc METHOD 2 :{0}", i);
+                Thread.Sleep(1000);
             }
         }
 
@@ -48,6 +48,15 @@ namespace Programming
         #endregion
 
         #region examples
+
+        public static void CodeProjectExample()
+        {
+            Thread t = new Thread(new ThreadStart(ThreadMethod));
+            Thread t2 = new Thread(new ParameterizedThreadStart(ThreadMethod2));
+
+            t.Start();
+            t2.Start(10);
+        }
         public static void FirstExample()
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
@@ -56,7 +65,7 @@ namespace Programming
             for (int i = 0; i < 4; i++)
             {
                 Console.WriteLine("Main thread: Do some work.");
-                Thread.Sleep(0);
+                Thread.Sleep(1);
             }
 
             t.Join();
