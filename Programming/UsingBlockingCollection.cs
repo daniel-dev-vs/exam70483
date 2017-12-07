@@ -32,7 +32,17 @@ namespace Programming
             });
 
             write.Wait();
+        }
 
+        public static void BlockingCollectionExample2()
+        {
+            BlockingCollection<string> col = new BlockingCollection<string>();
+
+            Task read = Task.Run(() => {
+                foreach (var i in col.GetConsumingEnumerable())
+                    Console.WriteLine(i);
+                    
+            });
         }
     }
 }

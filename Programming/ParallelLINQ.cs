@@ -65,7 +65,6 @@ namespace Programming
             {
                 Console.WriteLine("There were  {0} exceptions", e.InnerExceptions.Count);
             }           
-
        
         }
 
@@ -73,7 +72,7 @@ namespace Programming
         {
             if (i % 10 == 0) throw new ArgumentException();
 
-            return i % 2 == 0;
+            return i % 2 == 0; 
 
         }
     }
